@@ -1,0 +1,90 @@
+#pragma hdrstop
+#pragma argsused
+
+#include <stdio.h>
+#include <conio.h>
+
+#ifdef _WIN32
+#include <tchar.h>
+#else
+  typedef char _TCHAR;
+  #define _tmain main
+#endif
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	char str[100];
+	int n;
+	int fact = 1;
+	char str2[100];
+	scanf("%d", &n);
+	int j = 0;
+	for (int i = 0; i < n + 1; i++)
+	{
+		Reenter:
+		gets(str);
+		int k = 0;
+		while (str[k] != '\0')
+		{
+			k++;
+		}
+		if (k > 8)
+		{
+			printf("Wrong.\n");
+			goto Reenter;
+		}
+		int p = 0;
+		while (str[p] != '\0')
+		{
+			str2[j] = str[p];
+			p++;
+			j++;
+		}
+		int num = 0;
+		str2[j] = ' ';
+		j++;
+		while (str[num] != '\0')
+		{
+			str[num] = '\0';
+			num++;
+		}
+	}
+	for (int i = 0; i < 100; i++)
+	{
+		str2[i] = str2[i + 1];
+	}
+	str2[99] = '\0';
+	puts(str2);
+	for (int i = 0; i < n; i++)
+	{
+		fact = fact * n; // kol-vo kombinaciy
+	}
+	int first = 0;
+	int num1 = 0;
+	char FirstLetters[100];
+	char LastLetters[100];
+	for (int i = 0; i < 100; i++)
+	{
+		if (str2[i - 1] == '\0')
+		{
+			   break;
+		}
+		if (str2[i] == ' ' || str2[i] == '\0')
+		{
+			FirstLetters[num1] = first;
+			first = i + 1;
+			LastLetters[num1] = str2[i - 1];
+			num1++;
+		}
+	}
+
+	for (i = 0; i < fact; i++)
+	{
+
+	}
+
+
+	getch();
+	return 0;
+}
+
