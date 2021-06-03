@@ -1,0 +1,143 @@
+// 3.2(19) pavel gastilo
+#pragma hdrstop
+#include <tchar.h>
+#include <math.h>
+#include <conio.h>
+#include <stdio.h>
+int _tmain()
+{
+	int n,m,v,s;
+	Renter2:
+	printf("n=");
+	scanf("%d",&n);
+	if (n < 1)
+	{
+		printf("Vvedite normalnoe n\n");
+		goto Renter2;
+	}
+	if (n > 20)
+	{
+		printf("n slishkom bolshoe, vvedite menshe\n");
+		goto Renter2;
+	}
+	Renter3:
+	printf("\nm=");
+	scanf("%d",&m);
+	printf("\n");
+	if (m < 1)
+	{
+		printf("Vvedite normalnoe m\n");
+		goto Renter3;
+	}
+	if (m > 20)
+	{
+		printf("m slishkom bolshoe, vvedite menshe\n");
+		goto Renter3;
+	}
+	if (n >= 1 && n <= 20)
+	{
+		int  arr[n][m];
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < m; j++)
+			{
+				arr[i][j] = 1;
+			}
+		}
+		arr[n-1][0] = 0;
+		for (int i = 0; i < n; i++)
+		{
+			printf("%d",i);
+			printf("|");
+			printf(" ");
+			for (int j = 0; j < m; j++)
+			{
+				printf("%d",arr[i][j]);
+				printf(" ");
+			}
+			printf("\n");
+		}
+        printf("---------------------");
+		printf("\n");
+		printf(" ");
+		printf(" ");
+		printf(" ");
+		for (int i = 0; i < m; i++)
+		{
+			printf("%d",i);
+			printf("|");
+		}
+		while (arr[n-1][0] != 2)
+		{
+			Renter:
+			printf("\n");
+			printf("Vvedite nomer kletki po visote :");
+			scanf("%d",&v);
+			if (v >= n)
+			{
+				printf("Vvedena nepravilnaya visota");
+				goto Renter;
+			}
+			Renter1:
+			printf("\n");
+			printf("Vvedite nomer kletki po shirine:");
+			scanf("%d",&s);
+			system("cls");
+			if (s >= m)
+			{
+				printf("Vvedena nepravilnaya shirina");
+				goto Renter1;
+			}
+			if (arr[n-1][0] == arr[v][s] || arr[n-1][0] == arr[v-1][s] || arr[n-1][0] == arr[v][s-1])
+			{
+				arr[n-1][0] = 2;
+				printf("vi sieli otravlennyu chast\n");
+				printf("VI PROIGRALI");
+				break;
+			}
+			if (arr[v][s] == 2)
+			{
+				printf("\n");
+				printf("Vi vibrali yzhe vibranyu kletky, povtorite vvod");
+			}
+			if (arr[v][s] == 1 || arr[v-1][s] == 1 || arr[v][s+1] == 1 || arr[v][s] == 2 || arr[v-1][s] == 2 || arr[v][s+1] == 2)
+			{
+				printf("\n");
+				printf("Eshe odin xod, otravlennaya kletka vse eshe est");
+				arr[v][s] = 2;
+				arr[v-1][s] = 2;
+				arr[v][s+1] = 2;
+			}
+			printf("\n");
+			for (int i = 0; i < n; i++)
+			{
+				printf("%d",i);
+				printf("|");
+				printf(" ");
+				for (int j = 0; j < m; j++)
+				{
+					printf("%d",arr[i][j]);
+					printf(" ");
+				}
+				printf("\n");
+			}
+			printf("---------------------");
+			printf("\n");
+			printf(" ");
+			printf(" ");
+			printf(" ");
+			for (int i = 0; i < m; i++)
+			{
+				printf("%d",i);
+				printf("|");
+			}
+
+
+
+		}
+		getch();
+		return 0;
+	}
+	printf("Vvedeno ne korrektnoe znachenie, povtorite vvod");
+	goto Renter2;
+}

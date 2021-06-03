@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021.04.07 21:47:32.441,=D:\Project1PCH1.h</Transaction>
+    <Transaction>2021.04.07 21:47:32.740,=D:\File1.c</Transaction>
+    <Transaction>2021.04.07 22:44:36.144,D:\Labы\2 semestr\C\2 laba\2.1(5)\File1.c=D:\File1.c</Transaction>
+    <Transaction>2021.04.07 22:44:37.221,D:\Labы\2 semestr\C\2 laba\2.1(5)\Project1PCH1.h=D:\Project1PCH1.h</Transaction>
+    <Transaction>2021.04.07 22:44:38.286,D:\Labы\2 semestr\C\2 laba\2.1(5)\Project1.cbproj=D:\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>

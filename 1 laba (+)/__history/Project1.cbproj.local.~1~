@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.635,D:\File1.c=C:\Users\pavel\Desktop\с++\File1.c</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.923,=D:\File1.c</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.957,D:\Project1.cbproj=C:\Users\pavel\Desktop\с++\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.657,=D:\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.148,D:\Project1PCH1.h=C:\Users\pavel\Desktop\с++\Project1PCH1.h</Transaction>
+    <Transaction>2021.03.22 20:59:22.612,D:\Labы\2 semestr\C\1 laba\Project1.cbproj=C:\Users\pavel\Desktop\с++\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
